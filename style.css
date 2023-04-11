@@ -1,15 +1,23 @@
-
 body {
-  background-color: #FFFAFA;
+  background-color: #fffafa;
 }
 
 /* NAVBAR */
 
 nav {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-content: space-around;
-  background-color:aqua;
+  background-color: aqua;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
 }
 
 #nav-menu {
@@ -26,7 +34,7 @@ nav ul li {
 
 nav ul li a {
   display: flex;
-  color: #0D0060;
+  color: #0d0060;
   text-decoration: none;
 }
 
@@ -58,77 +66,217 @@ nav ul li a {
 /* SECTIONS */
 
 main {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* HOME */
 
 #home {
-  height: 800px;
-  width: auto;
-  background-color: aquamarine;
+  width: 100%;
+  background-color: #fffafa;
+  padding-top: 5%;
+}
+
+.all {
+  position: relative;
+  width: 100%;
+  height: 600px;
 }
 
 .me {
-  position: relative;
-  width: 217px;
-  height: 463px;
-  justify-content: center;
-}
-
-.all-messages {
-  position: relative;
-}
-
-.me-img-container {
-  position: relative;
-}
-
-.perfil-container {
   position: absolute;
-  top: 0px;
-  left: 10px;
-  width: 100%;
-  padding: 18px;
-  box-sizing: border-box;
+  width: 200px;
+  height: 400px;
+  top: 34%;
+  left: 8.8889%;
 }
 
-.adress-perfil {
-  font-family: ;
+.im-sky-balloon {
   position: absolute;
-  left: 110px;
+  width: 420px;
+  height: 110px;
+  top: 20%;
+  left: 7%;
 }
 
-.hobbies-container {
+.jr-dev-balloon {
   position: absolute;
-  top: 0px;
-  left: 10px;
-  width: 100%;
-  padding: 18px;
-  box-sizing: border-box;
+  width: 338px;
+  height: 149px;
+  top: 32%;
+  left: 18%;
 }
 
-.adress-hobbies {
-  font-family: ;
+/* LITTLE ICONS */
+
+.hearts {
   position: absolute;
-  left: 110px;
+  width: 470px;
+  height: 286px;
+  top: 2%;
+  left: 22%
 }
+
+.rosas {
+  position: absolute;
+  width: 118px;
+  height: 125px;
+  top: 80%;
+  left: 4.38%;
+}
+
+.pikachu {
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  top: 43%;
+  left: 30%;
+}
+
+.bulbasaur {
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  top: 43%;
+  left: 43%;
+}
+
+.squirtle {
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  top: 26%;
+  left: 85%;
+}
+
+.charmander {
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  top: 50%;
+  left: 53%;
+}
+
+.brasil {
+  position: absolute;
+  width: 107px;
+  height: 80px;
+  top: 28%;
+  left: 4.583%;
+}
+
+.tattoo {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: 2%;
+  left: 48%;
+}
+
+.gba {
+  position: absolute;
+  width: 75px;
+  height: 80px;
+  top: 85%;
+  left: 79%;
+}
+
+.rosa {
+  position: absolute;
+  width: 75px;
+  height: 80px;
+  top: 15%;
+  left: 89%;
+}
+
+.canva {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 45%;
+  left: 60%;
+}
+
+.pokebola {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 90%;
+  left: 19%;
+}
+
+.pc {
+  position: absolute;
+  width: 83px;
+  height: 80px;
+  top: 80%;
+  left: 87%;
+}
+
+/* MESSAGES */
 
 .perfil {
   position: absolute;
-  top: 80px;
+  top: 2.98%;
+  left: 59.93%;
+}
+
+.perfil-message {
+  width: 332px;
+  height: 250px;
+}
+
+.hobbies {
+  position: absolute;
+  top: 35%;
+  left: 70.65%;
+}
+
+.hobbies-message {
+  width: 332px;
+  height: 250px;
+}
+
+.likes {
+  position: absolute;
+  top: 52%;
+  left: 26.92%;
+}
+
+.likes-message {
+  width: 332px;
+  height: 250px;
+}
+
+.hates {
+  position: absolute;
+  top: 59%;
+  left: 49.92%;
+}
+
+.hates-message {
+  width: 332px;
+  height: 250px;
+}
+
+@media only screen and (m-width: 768px) {
+
+.all {
+  .all {
+    position: relative;
+  }
+}
+
 }
 
 /* STUDIES */
 
-
 /* PROJECTS */
 
 iframe {
-  
   border: 1px solid black;
-  width: 40%; 
+  width: 40%;
 }
 
 /* CONTACT */
@@ -156,10 +304,6 @@ form button[type="submit"] {
   cursor: pointer;
 }
 
-
-
-
-
 section {
   margin-bottom: 2rem;
 }
@@ -167,9 +311,6 @@ section {
 section h2 {
   margin-bottom: 1rem;
 }
-
-
-
 
 footer {
   text-align: center;
