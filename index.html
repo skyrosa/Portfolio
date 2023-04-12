@@ -6,42 +6,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="portfolio-site/pixel-heart-reto.png" type="image/png">
 </head>
 
 <body>
     <header>
+        <button onclick="scrollToTop()" class="scroll-to-top"><img src="portfolio-site/navbar-icons/arrow-navy.png"
+                alt="top" class="arrow-top"></button>
         <nav>
             <ul id="nav-menu">
-                <li><a href="home">
+                <li><a href="#home">
                         <img src="./portfolio-site/navbar-icons/icon _home_.png"
                             onmouseover="this.src='./portfolio-site/navbar-icons/home1.png'"
                             onmouseout="this.src='./portfolio-site/navbar-icons/icon _home_.png'" alt="home"
-                            class="home"></a>
+                            class="home">
+                        <img src="./portfolio-site/navbar-icons/fala-home.png" alt="hover" class="hover-home"></a>
                 </li>
-                <li><a href="study">
+                <li><a href="#studies">
                         <img src="./portfolio-site/navbar-icons/icon _book open_.png"
-                        onmouseover="this.src='./portfolio-site/navbar-icons/study1.png'"
-                        onmouseout="this.src='./portfolio-site/navbar-icons/icon _book open_.png'" alt="study" class="study"></a>
+                            onmouseover="this.src='./portfolio-site/navbar-icons/study1.png'"
+                            onmouseout="this.src='./portfolio-site/navbar-icons/icon _book open_.png'" alt="study"
+                            class="study">
+                        <img src="./portfolio-site/navbar-icons/fala-studies.png" alt="hover" class="hover-study"></a>
                 </li>
-                <li><a href="project">
+                <li><a href="#projects">
                         <img src="./portfolio-site/navbar-icons/icon _image gallery_.png"
-                        onmouseover="this.src='./portfolio-site/navbar-icons/project1.png'"
-                        onmouseout="this.src='./portfolio-site/navbar-icons/icon _image gallery_.png'" alt="project" class="project">
+                            onmouseover="this.src='./portfolio-site/navbar-icons/project1.png'"
+                            onmouseout="this.src='./portfolio-site/navbar-icons/icon _image gallery_.png'" alt="project"
+                            class="project">
+                        <img src="./portfolio-site/navbar-icons/fala-proj.png" alt="hover" class="hover-proj">
                     </a></li>
-                <li><a href="contact">
-                        <img src="./portfolio-site/navbar-icons/icon _mail_.png" 
-                        onmouseover="this.src='./portfolio-site/navbar-icons/message1.png'"
-                        onmouseout="this.src='./portfolio-site/navbar-icons/icon _mail_.png'" alt="contact" class="contact"></a></li>
+                <li><a href="#contact">
+                        <img src="./portfolio-site/navbar-icons/icon _mail_.png"
+                            onmouseover="this.src='./portfolio-site/navbar-icons/message1.png'"
+                            onmouseout="this.src='./portfolio-site/navbar-icons/icon _mail_.png'" alt="contact"
+                            class="contact">
+                        <img src="./portfolio-site/navbar-icons/fala-contact.png" alt="hover" class="hover-contact"></a>
+                </li>
                 <li><a href="color">
-                        <img src="./portfolio-site/navbar-icons/icon _sun_.png" 
-                        onmouseover="this.src='./portfolio-site/navbar-icons/color1.png'"
-                        onmouseout="this.src='./portfolio-site/navbar-icons/icon _sun_.png'" alt="color" class="color"></a></li>
+                        <img src="./portfolio-site/navbar-icons/icon _sun_.png"
+                            onmouseover="this.src='./portfolio-site/navbar-icons/color1.png'"
+                            onmouseout="this.src='./portfolio-site/navbar-icons/icon _sun_.png'" alt="color"
+                            class="color">
+                        <img src="./portfolio-site/navbar-icons/fala-mode.png" alt="hover" class="hover-color"></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="home">
+
+            <div class="carousel">
+                <div id="messages"></div>
+                <button id="back"><img src="./portfolio-site/back.png"></button>
+                <img src="./portfolio-site/perfil-message.png" style="display: none" class="perfil1"/>
+                <img src="./portfolio-site/hobbies-message.png" style="display: none" class="hobbies1"/>
+                <img src="./portfolio-site/likes-message.png" style="display: none" class="likes1"/>
+                <img src="./portfolio-site/hates-message.png" style="display: none" class="hates1"/>
+                <button id="next"><img src="./portfolio-site/next.png"></button>
+            </div>
 
             <div class="all">
 
@@ -60,7 +83,11 @@
                 <img src="./portfolio-site/gba.png" alt="gba" class="gba">
                 <img src="./portfolio-site/rosa-removebg-preview.png" alt="rosa" class="rosa">
 
-                <img src="./portfolio-site/mebracobaixo.png" class="me">
+                <div class="myself">
+                    <img src="./portfolio-site/mebracobaixo.png" class="me">
+                    <img src="./portfolio-site/mepazamor.png" class="me-hover">
+                </div>
+
                 <img src="./portfolio-site/im-sky-balloon.png" alt="hi" class="im-sky-balloon">
                 <img src="./portfolio-site/junior-dev-balloon.png" alt="junior dev" class="jr-dev-balloon">
 

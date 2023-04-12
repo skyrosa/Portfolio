@@ -2,6 +2,33 @@ body {
   background-color: #fffafa;
 }
 
+		.scroll-to-top {
+			position: fixed;
+			bottom: 4%;
+			right: 2%;
+			display: none;
+			width: 40px;
+			height: 40px;
+			border: none;
+			cursor: pointer;
+			opacity: 0.7;
+			border-radius: 50%;
+			text-align: center;
+			transition: opacity 0.3s ease-in-out;
+		}
+
+		.scroll-to-top:hover {
+			opacity: 1;
+		}
+
+a[href^="#"] {
+  transition: background-color 0.3s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* NAVBAR */
 
 nav {
@@ -38,29 +65,114 @@ nav ul li a {
   text-decoration: none;
 }
 
-.home {
+.home { 
+  position: relative;
+  z-index: 1;
   width: 40px;
   height: 40px;
+}
+
+.hover-home {
+  position: absolute;
+  top: 62%;
+  left: 74%;
+  width: 160px;
+  height: 90px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.home:hover + .hover-home {
+  opacity: 1;
+  z-index: 2;
 }
 
 .study {
+  position: relative;
+  z-index: 1;
   width: 40px;
   height: 40px;
+}
+
+.hover-study {
+  position: absolute;
+  top: 62%;
+  left: 78%;
+  width: 160px;
+  height: 90px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.study:hover + .hover-study {
+  opacity: 1;
+  z-index: 2;
 }
 
 .project {
+  position: relative;
+  z-index: 1;
   width: 40px;
   height: 40px;
+}
+
+.hover-proj {
+  position: absolute;
+  top: 72%;
+  left: 82%;
+  width: 160px;
+  height: 76px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project:hover + .hover-proj {
+  opacity: 1;
+  z-index: 2;
 }
 
 .contact {
+  position: relative;
+  z-index: 1;
   width: 40px;
   height: 40px;
 }
 
+.hover-contact {
+  position: absolute;
+  top: 72%;
+  left: 86%;
+  width: 160px;
+  height: 76px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact:hover + .hover-contact {
+  opacity: 1;
+  z-index: 2;
+}
+
 .color {
+  position: relative;
+  z-index: 1;
   width: 40px;
   height: 40px;
+}
+
+.hover-color {
+  position: absolute;
+  top: 72%;
+  left: 90%;
+  width: 160px;
+  height: 76px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.color:hover + .hover-color {
+  opacity: 1;
+  z-index: 2;
 }
 
 /* SECTIONS */
@@ -84,12 +196,42 @@ main {
   height: 600px;
 }
 
+.myself {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
 .me {
   position: absolute;
   width: 200px;
   height: 400px;
-  top: 34%;
-  left: 8.8889%;
+  top: 100%;
+  left: 43%;
+  z-index: 1; 
+}
+
+.me-hover {
+  position: absolute;
+  top: 105%;
+  left: 43%;
+  width: 238px;
+  height: 390px;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.myself:hover .me {
+  opacity: 0;
+}
+
+.myself:hover .me-hover {
+  opacity: 1;
+}
+
+.me:hover + .me-hover {
+  opacity: 1;
 }
 
 .im-sky-balloon {
@@ -146,7 +288,7 @@ main {
   position: absolute;
   width: 57px;
   height: 57px;
-  top: 26%;
+  top: 27%;
   left: 85%;
 }
 
@@ -229,7 +371,7 @@ main {
 
 .hobbies {
   position: absolute;
-  top: 35%;
+  top: 36%;
   left: 70.65%;
 }
 
@@ -260,23 +402,450 @@ main {
   height: 250px;
 }
 
-@media only screen and (m-width: 768px) {
+@media (max-width: 480px) {
 
-.all {
+  body {
+    background-color: #fffafa;
+  }
+  
+  .carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+  #messages {
+    width: 100%;
+    height: 40px;
+    background-size: cover;
+}  
+
+      .scroll-to-top {
+        position: fixed;
+        bottom: 4%;
+        right: 2%;
+        display: none;
+        width: 40px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.7;
+        border-radius: 50%;
+        text-align: center;
+        transition: opacity 0.3s ease-in-out;
+      }
+  
+      .scroll-to-top:hover {
+        opacity: 1;
+      }
+  
+  a[href^="#"] {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* NAVBAR */
+  
+  nav {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: space-around;
+    background-color: aqua;
+  }
+  
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+  }
+  
+  #nav-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: flex;
+    justify-content: space-between;
+    width: 65px;
+  }
+  
+  nav ul li a {
+    display: flex;
+    color: #0d0060;
+    text-decoration: none;
+  }
+  
+  .home { 
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hover-home {
+    position: absolute;
+    top: 62%;
+    left: 74%;
+    width: 160px;
+    height: 90px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .home:hover + .hover-home {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .study {
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hover-study {
+    position: absolute;
+    top: 62%;
+    left: 78%;
+    width: 160px;
+    height: 90px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .study:hover + .hover-study {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .project {
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hover-proj {
+    position: absolute;
+    top: 72%;
+    left: 82%;
+    width: 160px;
+    height: 76px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project:hover + .hover-proj {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .contact {
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hover-contact {
+    position: absolute;
+    top: 72%;
+    left: 86%;
+    width: 160px;
+    height: 76px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .contact:hover + .hover-contact {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .color {
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hover-color {
+    position: absolute;
+    top: 72%;
+    left: 90%;
+    width: 160px;
+    height: 76px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .color:hover + .hover-color {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  /* SECTIONS */
+  
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  /* HOME */
+  
+  #home {
+    width: 100%;
+    background-color: #fffafa;
+    padding-top: 5%;
+  }
+  
   .all {
     position: relative;
+    width: 100%;
+    height: 600px;
   }
-}
+  
+  .myself {
+    position: relative;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .me {
+    position: absolute;
+    width: 140px;
+    height: 300px;
+    top: 70%;
+    left: 6%;
+    z-index: 1; 
+  }
+  
+  .me-hover {
+    position: absolute;
+    top: 75%;
+    left: 6%;
+    width: 168px;
+    height: 290px;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.1s ease-in-out;
+  }
+  
+  .myself:hover .me {
+    opacity: 0;
+  }
+  
+  .myself:hover .me-hover {
+    opacity: 1;
+  }
+  
+  .me:hover + .me-hover {
+    opacity: 1;
+  }
+  
+  .im-sky-balloon {
+    position: absolute;
+    width: 420px;
+    height: 110px;
+    top: 25%;
+    left: 10%;
+  }
+  
+  .jr-dev-balloon {
+    position: absolute;
+    width: 338px;
+    height: 149px;
+    top: 10%;
+    left: 6%;
+  }
+  
+  /* LITTLE ICONS */
+  
+  .hearts {
+    display: none;
+    position: absolute;
+    width: 470px;
+    height: 286px;
+    top: 2%;
+    left: 22%
+  }
+  
+  .rosas {
+    display: none;
+    position: absolute;
+    width: 118px;
+    height: 125px;
+    top: 80%;
+    left: 4.38%;
+  }
+  
+  .pikachu {
+    display: none;
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    top: 43%;
+    left: 30%;
+  }
+  
+  .bulbasaur {
+    display: none;
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    top: 43%;
+    left: 43%;
+  }
+  
+  .squirtle {
+    display: none;
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    top: 27%;
+    left: 85%;
+  }
+  
+  .charmander {
+    display: none;
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    top: 50%;
+    left: 53%;
+  }
+  
+  .brasil {
+    display: none;
+    position: absolute;
+    width: 107px;
+    height: 80px;
+    top: 28%;
+    left: 4.583%;
+  }
+  
+  .tattoo {
+    display: none;
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 2%;
+    left: 48%;
+  }
+  
+  .gba {
+    display: none;
+    position: absolute;
+    width: 75px;
+    height: 80px;
+    top: 85%;
+    left: 79%;
+  }
+  
+  .rosa {
+    display: none;
+    position: absolute;
+    width: 75px;
+    height: 80px;
+    top: 15%;
+    left: 89%;
+  }
+  
+  .canva {
+    display: none;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 45%;
+    left: 60%;
+  }
+  
+  .pokebola {
+    display: none;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 90%;
+    left: 19%;
+  }
+  
+  .pc {
+    display: none;
+    position: absolute;
+    width: 83px;
+    height: 80px;
+    top: 80%;
+    left: 87%;
+  }
+  
+  /* MESSAGES */
+  
+  .perfil {
+    position: absolute;
+    top: 2.98%;
+    left: 59.93%;
+  }
+  
+  .perfil-message {
+    width: 332px;
+    height: 250px;
+  }
+  
+  .hobbies {
+    position: absolute;
+    top: 36%;
+    left: 70.65%;
+  }
+  
+  .hobbies-message {
+    width: 332px;
+    height: 250px;
+  }
+  
+  .likes {
+    position: absolute;
+    top: 52%;
+    left: 26.92%;
+  }
+  
+  .likes-message {
+    width: 332px;
+    height: 250px;
+  }
+  
+  .hates {
+    position: absolute;
+    top: 59%;
+    left: 49.92%;
+  }
+  
+  .hates-message {
+    width: 332px;
+    height: 250px;
+  }
 
 }
 
 /* STUDIES */
 
+.notepad {
+  width: 100%;
+}
+
 /* PROJECTS */
 
 iframe {
   border: 1px solid black;
-  width: 40%;
+  width: 100%;
 }
 
 /* CONTACT */
