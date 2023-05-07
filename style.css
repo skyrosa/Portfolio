@@ -493,7 +493,7 @@ main {
   .hover-home {
     position: absolute;
     top: 62%;
-    left: 74%;
+    left: 78%;
     width: 160px;
     height: 90px;
     opacity: 0;
@@ -837,16 +837,43 @@ main {
 
 /* STUDIES */
 
-.notepad {
+#studies {
   width: 100%;
+  height: 580px;
+}
+
+.notepad {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  margin-left: 20%;
+  z-index: -1;
+}
+
+.study-text {
+  position: relative;
+  width: 35%;
+  height: 100%;
+  margin-left: 28%;
+  padding-top: 4%;
+  font-size: 27px;
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
 }
 
 /* PROJECTS */
 
 iframe {
-  border: 1px solid black;
-  width: 100%;
+  border: 3px solid #910000;
+  width: 60%;
+  margin-top: 5%;
+  border-width: 100%;
+  border-image-source: url(./portfolio-site/top_box.png) url(./portfolio-site/bottom_box.png) ;
+  border-image-slice: 10% 10% 10% 10%;
+  border-image-repeat: round round;
 }
+
 
 /* CONTACT */
 
@@ -860,15 +887,16 @@ form textarea {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: #FFCCC4;
+  border: 2px solid #910000;
+  border-radius: 2px;
 }
 
 form button[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  background-color: #FFCCC4;
+  color: #910000;
+  border: 2px solid #910000;
+  border-radius: 2px;
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
