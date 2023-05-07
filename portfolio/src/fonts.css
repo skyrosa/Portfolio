@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Aldrich', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.googleapis.com/css2?family=Aldrich&family=VT323&display=swap") format('truetype');
+}
+
+@font-face {
+    font-family: 'VT323', monospace;
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap") format('truetype');
+}
